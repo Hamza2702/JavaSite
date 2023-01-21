@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/style.css"/>
+    <script async src="java/java.js"></script>
+
+    <style type="text/css">
+
+        .main {
+        width:200px;
+        border:1px solid black;
+        }
+        
+        .month {
+        background-color:black;
+        font:bold 12px verdana;
+        color:white;
+        }
+        
+        .daysofweek {
+        background-color:gray;
+        font:bold 12px verdana;
+        color:white;
+        }
+        
+        .days {
+        font-size: 12px;
+        font-family:verdana;
+        color:black;
+        background-color: lightyellow;
+        padding: 2px;
+        }
+        
+        .days #today{
+        font-weight: bold;
+        color: red;
+        }
+        
+        </style>
+</head>
+
+<body>
+    <header class="header"> <!-- Nav bar Hamburger Menu -->
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+      <nav id="navBar"></nav>
+    </ul>
+  </header>
+    <div>
+        <img src="images/moon.png" style="width:5%" usemap="#moonmap">
+        <map name="#moonmap">
+            <area
+            shape="rect"
+            coords="0,0,1000,1000"
+            href=""
+            onclick="moonFunction()"/>
+        </map>
+    </div>
+    <section> <!-- Section 1 -- Title -- -->
+        <div>
+            <h1 style="font-size: 500%;font-family:Poppins,sans-serif;">Football</h1>
+            <p style="margin-top: -50px;text-align: center;">Not just a game, but an art.</p>
+        </div>
+    </section>
+    <section class="hidden"> <!-- Section 2 -- Website -- -->
+        <h1>
+            What is this website about?
+        </h1>
+        <p>This website is created solely for the topic of football.<br> In this website, there are multiple pages on this site talking about:</p>
+        <div align:left>
+        <ul>
+            <li class="hidden list">Players</li>
+            <li class="hidden list">Teams</li>
+            <li class="hidden list">Events</li>
+            <li class="hidden list">Favourites</li>
+            <li class="hidden list">World Cup 2014</li>
+            <li class="hidden list">Contact</li>
+        </ul>
+    </div>
+    </section>
+    <section class="hidden"> <!-- Section 3 -- Football video -- -->
+        <div id="C2">
+            <iframe width="560px" height="315px" name="iframe_a" src="https://www.youtube.com/embed/A-r9sj7zHJ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+    </section>
+    <section class="hidden">  <!-- Section 4 -- What is football? -- -->
+        <h1>What is football?</h1>
+        <p>
+            Football is a team sport played between two teams of 11 players who use their feet to kick the ball around a field.
+            <br>
+            The aim of the game is the score as many goals as possible within two 45 minute halves.
+            <br>
+            Moreover, a team is made up of a goalkeeper, defenders, midfielders and strikers. 
+        </P>
+    </section>
+    <section> <!-- Section 5 -- Footy facts -- -->
+        <h1>Footy facts:</h1>
+        <script>
+            var todayDate = new Date();
+            var curDay = todayDate.getDay();
+    
+            switch (curDay)
+            {
+                case 0:
+                    document.write("<h1>Sunday</h1><p1>World Cup finals are hosted on Sunday.<br> The 2022 world cup was hosted on Sunday, 18th December!<br>With a score of 3-3, Argentina won 4-3 on penalties!</p1>");
+                    break;
+                case 1:
+                    document.write("<h1>Monday</h1><p1>On Monday, 27 April 1981, the 1st female soccer official was hired by NASL</p1>");
+                    break;
+                case 2:
+                    document.write("<h1>Tuesday</h1><p1>On Tuesday, 3 Dec 2013, fans brought a lot flares to the stadium<br></p1>");
+                    break;
+                case 3:
+                    document.write("<h1>Wednesday</h1><p1>On Wednesday, 24 June 1987, Lionel Messi was born.</p1>");
+                    break;
+                case 4:
+                    document.write("<h1>Thursday</h1><p1>On Thursday, 17 December 2015, José Mourinho was sacked as manager of British Premier football club Chelsea</p1>");
+                    break;
+                case 5:
+                    document.write("<h1>Friday</h1><p1>On Friday, 2 May 1975, David Beckham was born.</p1>");
+                    break;
+                case 6:
+                    document.write("<h1>Saturday</h1><p1>On Saturday, 24 June 2017, World record for highest altitude football match ever played at 18,799ft <br> on Mount Kilimanjaro by women's international team</p1>");
+                    break;
+            }   
+        </script> 
+        <br>
+        <!-- Calendar -->
+        <script>     
+            var todaydate=new Date()
+            var curmonth=todaydate.getMonth()+1 //get current month (1-12)
+            var curyear=todaydate.getFullYear() //get current year
+            
+            document.write(buildCal(curmonth ,curyear, "main", "month", "daysofweek", "days", 1));
+        </script>
+    </section>
+    <div class="footer"> <!-- Bottom -->
+        <img src="images/backgroundFloor.png" class="img-responsive1" class="footer">
+    </div>
+</body>
+</html>
