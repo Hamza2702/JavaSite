@@ -11,7 +11,13 @@
     <script defer src="java/java.js"></script>
 </head>
 <body>
-    <nav id="navBar"></nav> <!-- Nav Bar -->
+    <header class="header"> <!-- Nav bar Hamburger Menu -->
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul class="menu">
+          <nav id="navBar"></nav>
+        </ul>
+      </header>
     <div>
         <img src="images/moon.png" style="width:5%" usemap="#moonmap">
         <map name="#moonmap">
